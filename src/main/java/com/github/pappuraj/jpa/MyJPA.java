@@ -4,7 +4,10 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.stereotype.Component;
 
+@Component
 public class MyJPA {
 	
 	private UserRepository userRepository;
@@ -19,10 +22,11 @@ public class MyJPA {
 		return student;
 	}
 	
-	public void view(int id) {
+	public Students view(int id) {
 		Optional<Students> stdOpt = userRepository.findById(id);
 		Students std=stdOpt.get();
 		System.out.println(std);
+		return std;
 	}
 	
 	public void viewAll() {
