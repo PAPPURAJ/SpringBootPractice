@@ -25,7 +25,8 @@ public class SpringBootPracticeApplication {
 		
 		
 		//myJPA.findByName("PAPPURAJ");
-		myJPA.viewAllS();
+		//myJPA.viewAllS();
+		myJPA.viewAllByName("Keya");
 
 	}
 
