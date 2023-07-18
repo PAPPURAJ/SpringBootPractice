@@ -14,17 +14,18 @@ import com.github.pappuraj.jpa.UserRepository;
 public class SpringBootPracticeApplication {
 
 	public static void main(String[] args) {
-		ApplicationContext context= SpringApplication.run(SpringBootPracticeApplication.class, args);
+		ApplicationContext context = SpringApplication.run(SpringBootPracticeApplication.class, args);
+
+		MyJPA myJPA = new MyJPA(context);
+
+		// myJPA.insert();
+		// myJPA.view(0);
+		//myJPA.viewAll();
+		// myJPA.delete(0);
 		
-		MyJPA myJPA=new MyJPA(context);
 		
-		//myJPA.insert();
-		//myJPA.view(0);
-		myJPA.viewAll();
-		//myJPA.delete(0);
-			
-		
-		
+		myJPA.findByName("PAPPURAJ");
+
 	}
 
 }

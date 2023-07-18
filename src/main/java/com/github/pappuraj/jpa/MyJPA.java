@@ -1,5 +1,6 @@
 package com.github.pappuraj.jpa;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.context.ApplicationContext;
@@ -42,6 +43,16 @@ public class MyJPA {
 	
 	public void delete(int id) {
 		userRepository.deleteById(id);;
+	}
+	
+	
+	
+	//Using finder method (Most important)
+	
+	public void findByName(String name) {
+		List<Students> students= userRepository.findByName(name);
+		for(Students st:students)
+			System.out.println(st);
 	}
 
 }
