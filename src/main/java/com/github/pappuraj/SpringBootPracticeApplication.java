@@ -1,5 +1,7 @@
 package com.github.pappuraj;
 
+import java.util.Optional;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -15,8 +17,43 @@ public class SpringBootPracticeApplication {
 		
 		UserRepository userRepository=context.getBean(UserRepository.class);
 		
-		Students student=userRepository.save(new Students("Pappuraj",174111));
-		System.out.println(student);
+		
+//		//insert
+
+		
+		
+		
+		
+		//Fetch one record
+//		Optional<Students> stdOpt = userRepository.findById(1);
+//		Students std=stdOpt.get();
+//		System.out.println(std);
+		
+		
+		
+		
+		
+		
+		//update
+//		Optional<Students> stdOpt = userRepository.findById(1);
+//		Students std=stdOpt.get();
+//		std.setName("Shayeri");;
+//		userRepository.save(std);
+//		System.out.println(stdOpt.get());
+		
+		
+		//Fetch all
+//		Iterable<Students> findAll = userRepository.findAll();
+//		findAll.forEach(student->{
+//			System.out.println(student);
+//		});
+		
+		
+		
+		//delete
+//		userRepository.deleteById(102);;
+		
+		
 		
 	}
 
