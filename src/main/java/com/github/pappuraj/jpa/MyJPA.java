@@ -54,5 +54,16 @@ public class MyJPA {
 		for(Students st:students)
 			System.out.println(st);
 	}
+	
+	
+	public void viewAllS() {
+		List<Students> students= userRepository.getAllUser();
+		for(Students st:students)
+			System.out.println(st);
+	}
+	
+	
+	
+	
 
 }

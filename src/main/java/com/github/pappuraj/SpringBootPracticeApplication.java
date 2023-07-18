@@ -24,7 +24,8 @@ public class SpringBootPracticeApplication {
 		// myJPA.delete(0);
 		
 		
-		myJPA.findByName("PAPPURAJ");
+		//myJPA.findByName("PAPPURAJ");
+		myJPA.viewAllS();
 
 	}
 

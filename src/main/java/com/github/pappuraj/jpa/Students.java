@@ -2,12 +2,13 @@ package com.github.pappuraj.jpa;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
 
 public class Students {
-	@GeneratedValue
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Id
 	private int id;
 	private String name;
