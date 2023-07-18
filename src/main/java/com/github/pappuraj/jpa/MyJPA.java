@@ -68,6 +68,13 @@ public class MyJPA {
 			System.out.println(st);
 	}
 	
+	public void nativeQueryLoadAll(int id) {
+		List<Students> students= userRepository.nativeQueryLoadAll(id);
+		for(Students st:students)
+			System.out.println(st);
+	}
+	
+	
 	
 	
 

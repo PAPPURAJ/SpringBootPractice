@@ -18,4 +18,8 @@ public interface UserRepository extends CrudRepository<Students, Integer>{
 	@Query("SELECT s FROM Students s WHERE s.name=:a")
 	public List<Students> getAllUserQ(@Param("a") String name);
 	
+	//Native SQL Query
+	@Query(value = "SELECT * FROM Students where id=:stdID",nativeQuery = true)
+	public List<Students> nativeQueryLoadAll(@Param("stdID") int id);
+	
 }
