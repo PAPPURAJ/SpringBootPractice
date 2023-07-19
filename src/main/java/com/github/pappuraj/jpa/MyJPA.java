@@ -18,11 +18,11 @@ public class MyJPA {
 //	}
 	
 
-	public  Students insert() {
-		Students student=userRepository.save(new Students("Keya",174011));
-		System.out.println(student);
-		return student;
-	}
+//	public  Students insert() {
+//		Students student=userRepository.save(new Students("Keya",174011));
+//		System.out.println(student);
+//		return student;
+//	}
 	
 	public MyJPA() {
 		super();
