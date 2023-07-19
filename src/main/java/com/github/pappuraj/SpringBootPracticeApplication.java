@@ -16,7 +16,7 @@ public class SpringBootPracticeApplication {
 	public static void main(String[] args) {
 		ApplicationContext context = SpringApplication.run(SpringBootPracticeApplication.class, args);
 
-		MyJPA myJPA = new MyJPA(context);
+	//	MyJPA myJPA = new MyJPA(context);
 
 		// myJPA.insert();
 		// myJPA.view(0);

@@ -1,6 +1,7 @@
 package com.github.pappuraj;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -10,12 +11,13 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.github.pappuraj.jpa.MyJPA;
 import com.github.pappuraj.jpa.Students;
+import com.github.pappuraj.jpa.UserRepository;
 
 @RestController
 public class MyRestController {
 	
 	@Autowired
-	private MyJPA myJPA;
+	private UserRepository userRepository;
 	
 	@GetMapping("/get")
 	public ArrayList<Students> loadStudent() {
@@ -31,10 +33,10 @@ public class MyRestController {
 	}
 	
 	@GetMapping("/student/{id}")
-	public Students postStudent(@PathVariable("id") int id) {
+	public List<Students> postStudent(@PathVariable("id") int id) {
 		
 		
-		return myJPA.view(id);
+		return userRepository.nativeQueryLoadAll(id);
 	}
 	
 	
