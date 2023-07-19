@@ -1,5 +1,7 @@
 package com.github.pappuraj.jpa;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -10,11 +12,12 @@ import jakarta.persistence.OneToOne;
 @Entity
 
 public class Students {
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Id
 	private int id;
 	private String name;
 	private int studentID;
+	@JsonManagedReference //Used to solve redundant problem 
 	@OneToOne(cascade = CascadeType.ALL)
 	private Teacher teacher;
 	public Students() {
